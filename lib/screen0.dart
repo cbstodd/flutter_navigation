@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screen1.dart';
-import 'screen2.dart';
 
 class Screen0 extends StatelessWidget {
   @override
@@ -17,18 +15,14 @@ class Screen0 extends StatelessWidget {
               color: Colors.red,
               child: Text('Go To Screen 1'),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Screen1();
-                }));
+                Navigator.pushNamed(context, '/first');
               },
             ),
             RaisedButton(
               color: Colors.blue,
               child: Text('Go To Screen 2'),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Screen2();
-                }));
+                Navigator.pushNamed(context, '/second');
               },
             ),
           ],
